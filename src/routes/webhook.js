@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const githubUser = process.env.USER
+const childProcess = require('child_process');
+const githubUser = process.env.GITHUB_USER;
 
 router.post("/webhooks/github", function (req, res) {
         
