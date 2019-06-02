@@ -1,0 +1,23 @@
+{
+    "ABOUT": "Acerca",
+    "PROJECTS": "Proyectos",
+    "BLOG": "Blog",
+
+    "A_1": "¡Hola! Soy un desarrollador web y entusiasta de la música digital.",
+    "A_2": "Un apasionado del aprendizaje multidisciplinario.",
+    "A_3": "¿Tienes un proyecto, idea o problema del que quisieras discutir?",
+    "A_4": "Hablemos un poco",
+    "S": "Sobre Mi",
+    "S_1": "Desarrollo Web",
+    "S_1_1": "Soy desarrollador con conocimientos en tecnologías web modernas como JavaScript ES6, Angular, RxJS, NodeJS, SQL, HTML, CSS y más.",
+    "S_2": "Disciplina",
+    "S_2_1": "Creo en la productividad que ofrece la metodología ágil, la puntualidad y la organización.",
+    "S_3": "Trabajo en Equipo",
+    "S_3_1": "El trabajo en equipo es la escencia del software, por esta razón el aprendizaje a través de la experiencia conjunta es una de las hábilidades que mas aprecio y desarrollo.",
+    "S_4": "Pensamiento Modular",
+    "S_4_1": "El desarrollo de software es una tarea exhaustiva basada en la solución de problemas. La fragmentación progresiva de dichos problemas es fundamental para obtener grandes resultados.",
+    "BACK": "ATRÁS",
+    "FILTER": "FILTRO",
+    "MONTH": "MES",
+    "YEAR": "AÑO"
+}

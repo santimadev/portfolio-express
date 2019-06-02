@@ -1,0 +1,31 @@
+- let translator = lang === "en" ? "?clang=es" : "?clang=en"
+style
+        include ../css/navbar.css
+nav
+    .nav-head
+        a(href=`/?clang=${lang}`)
+                .logo-bar
+                        .avatar-box
+                                img(class="avatar lazy" data-src="../../assets/img/avatar.png")
+                        .logo
+                                span(class="title") Santiago Marcano
+                                p(class="subtitle") Web Development 
+        button(id="burger" class="burger-icon") &#9776;
+
+    .navigation-desktop
+        a(href=`/?clang=${lang}` class="nav-button") #{t.ABOUT.toUpperCase()}  
+        a(href=`/projects?clang=${lang}` class="nav-button") #{t.PROJECTS.toUpperCase()}  
+        a(href=`/blog?clang=${lang}` class="nav-button") #{t.BLOG.toUpperCase()}  
+        a(href=pathname+translator class="nav-button") #{lang.toUpperCase()}
+
+
+div(id="navMobile" class="navMobile")
+        .mobile
+                a(href=`/?clang=${lang}` class="mobileButton") #{t.ABOUT.toUpperCase()}  
+                a(href=`/projects?clang=${lang}` class="mobileButton") #{t.PROJECTS.toUpperCase()}  
+                a(href=`/blog?clang=${lang}` class="mobileButton") #{t.BLOG.toUpperCase()}  
+                a(href=pathname+translator class="mobileButton") #{lang.toUpperCase()}           
+        .closeContainer
+                button(class="cross" id="cross") &#x2715;
+script
+        include ../scripts/navbar.js

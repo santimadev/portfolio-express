@@ -1,0 +1,27 @@
+style
+    include ../css/footer.css
+footer
+    .foot-head
+        .footer-title Santiago Marcano
+            br
+            a(class="link email" href="mailto: hola@santiagomarcano.com?Subject=Hola%20Santiago!%20Nos%20gustaría%20hablar%20contigo" target="_blank") hola@santiagomarcano.com
+        a(onclick="window.scrollTo({ left: 0, top: 0, behavior: 'smooth'})" class="go-top")
+            i(class="material-icons md-48 orange600" style="cursor: pointer") keyboard_arrow_up
+    .links-container
+        .media
+            span(class="footer-subtitle") Menu
+            ul
+                li
+                    a(class="link" href=`/${language}`) #{t.ABOUT}
+                li
+                    a(class="link" href=`/projects${language}`) #{t.PROJECTS}
+                li
+                    a(class="link" href=`/blog${language}`) #{t.BLOG}
+        .media
+            span(class="footer-subtitle") Media
+            ul
+                li
+                    a(class="link" href="https://github.com/smaudd" target="_blank") GitHub
+                li
+                    a(class="link" href="https://twitter.com/smarcanur" target="_blank") Twitter
+    .div Copyright © 2019 - Santiago Marcano

@@ -1,0 +1,50 @@
+extends ../../templates/layout
+
+block main
+    style
+        include ../../css/blog.css
+    div(class="blog-template view")
+        div(style="display: flex; justify-content: flex-end")
+            button(id="filter-btn") FILTER 
+        div(id="filter-view" class="init")
+            .filter-content
+                .filter-items
+                    div(class="item")
+                        span MONTH
+                        hr(style="border-color: white")
+                        each month in filters.months
+                            a(href=`blog?clang=${lang}&filter=month&value=${month}`) #{month}
+                            br    
+                    div(class="item")
+                        span YEAR
+                        hr(style="border-color: white")
+                        each year in filters.years
+                            a(href=`blog?clang=${lang}&filter=year&value=${year}`) #{year}
+                            br
+                    div(class="item")
+                        span TAGS
+                        hr(style="border-color: white")
+                        ul(class="tag-list")
+                        each tag in filters.tags
+                            li
+                                a(class="tag" href=`blog?clang=${lang}&filter=tag&value=${tag}`) #{tag}
+                .cross
+                    button(class="cross" id="close") &#x2715;
+        script
+            include ../../scripts/filter.js
+        div(class="posts")
+        each post in posts
+            ul
+                - function removeAccents(str) { return str.replace(/Á/g, 'A').replace(/É/g, 'E').replace(/Í/g, 'I').replace(/Ó/g, 'O').replace(/Ú/g, 'U').replace(/á/g, 'a').replace(/é/g, 'e').replace(/í/g, 'i').replace(/ó/g, 'o').replace(/ú/g, 'u').replace(/Ñ/g, 'N').replace(/ñ/g, 'n') }
+                - title = post.title.replace(/ /g, '-').toLowerCase();
+                - blogImage = img_path + '/' + removeAccents(title) + post.image.replace(/^[.]/, '');
+                .image-box
+                    a(href=`/blog/${removeAccents(title)}?clang=${lang}`)
+                        img(data-src=blogImage class="lazy" style="max-width: 100%")
+                a(href=`/blog/${removeAccents(title)}?clang=${lang}` style="color: #F4743B;")
+                    li(class="blog-title") #{post.title}
+                li(class="blog-subtitle") #{post.author} - #{post.date}
+                li #{post.punchline}
+                br
+
+                        

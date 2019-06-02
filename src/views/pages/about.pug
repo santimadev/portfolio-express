@@ -1,0 +1,43 @@
+extends ../templates/layout
+
+block main
+    style
+        include ../css/about.css
+
+    div(class="wrapper view")
+        p(class="t1")
+            span #{t.A_1}
+            br
+            span #{t.A_2}
+        p(class="t2")
+            span #{t.A_3}
+        p(class="t2")
+            span #{t.A_4}
+            br
+            a(class="t2" style="color: #F4743B; padding: 0; text-decoration: none" href="mailto: hola@santiagomarcano.com?Subject=Hola%20Santiago!%20Nos%20gustaría%20hablar%20contigo" target="_blank") hola@santiagomarcano.com
+        span(class="spacer")
+        .skills-button
+            button(onclick="document.getElementById('skills').scrollIntoView({ behavior: 'smooth' })")
+                i(class="material-icons md-48 teal600") keyboard_arrow_down
+    div(class="skills-view" id="skills")
+        p(class="skill") #{t.S}
+            .skill-head
+                i(class="material-icons md-48 orange600") code
+                span(class="t2") #{t.S_1}
+            p(class="t3")
+                span #{t.S_1_1}
+            .skill-head
+                i(class="material-icons md-48 orange600") memory
+                span(class="t2") #{t.S_2}
+            p(class="t3")
+                span #{t.S_2_1}
+            .skill-head
+                i(class="material-icons md-48 orange600") people
+                span(class="t2") #{t.S_3}
+            p(class="t3")
+                span #{t.S_3_1}
+            .skill-head
+                i(class="material-icons md-48 orange600") view_module
+                span(class="t2") #{t.S_4}
+            p(class="t3")
+                span #{t.S_4_1}

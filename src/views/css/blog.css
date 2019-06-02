@@ -1,0 +1,130 @@
+.blog-template {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+}
+
+.posts {
+    display: flex;
+    flex-flow: column;
+}
+
+#filter-btn {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.init {
+    display: none;
+    animation: fadeout .3s;
+}
+
+@keyframes fadeout {
+    0% { opacity: 1; display: inline;}
+    100% { opacity: 0;}
+}
+
+a {
+    color: white;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.filter {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    max-width: 100%;
+    z-index: 1;
+    background: rgb(60,110,113, .95);
+    border-radius: 5px;
+    animation: fadein .3s;
+}
+
+@keyframes fadein {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
+.filter-content {
+    color: white;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.filter-items {
+    margin: 30px;
+    display: flex;
+    flex-flow: column;
+}
+
+.filter-items > div {
+    margin: 20px;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.cross {
+    padding: 15px;
+}
+
+input {
+    border-color: gray;
+    border: 1px solid gray;
+    border-radius: 2px;
+}
+
+@keyframes fader {
+    0% { opacity: 0;}
+    100% { opacity: 100%;}
+}
+
+.image-box {
+    width: 100%;
+    border-radius: 5px;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+}
+
+
+.blog-title {
+    font-size: 25px;
+}
+
+.blog-subtitle {
+    font-size: 18px;
+    color: gray;
+}
+
+@media screen and (max-width: 800px) {
+    .posts {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .posts {
+        width: 100%;
+    }
+}
+
+.tag {
+    position: relative;
+    white-space: normal;
+    background: gray;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    margin-top: 100px;
+}
+
+.tag-list {
+    display: inline;
+}

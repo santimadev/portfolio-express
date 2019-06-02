@@ -1,0 +1,25 @@
+extends ../../templates/layout
+
+
+
+block main
+    style
+        include ../../css/projects-list.css
+    div(class="view projects" style="display: flex; flex-flow: column")
+        p(class="page-title") #{t.PROJECTS}
+            - let i = 0;
+            each project in projects
+                - projectName = project.name.replace(/ /g, '-').toLowerCase();
+                - projectImage = img_path + '/' + projectName + project.image.replace(/^[.]/, '');
+                - i++
+                - const descriptionClass = i%2 === 0 ? 'description' : 'description2'
+                    div(class="project-box")
+                        a(href=`/project/${projectName}?clang=${lang}` style="color: black")
+                            div(data-bg=`url(${projectImage})` class="lazy img-card")
+                            .sub-box
+                                li(class="type") #{project.type}
+                                li(class="title" style="color: #F4743B;") #{project.name}
+                                li(class="color: gray") #{project.description}
+                            a(href=`/project/${projectName}?clang=${lang}`)
+                                div(class=descriptionClass) 
+                                    .text #{project.year}

@@ -1,0 +1,100 @@
+.projects {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.title-btn {
+    color: #F4743B;
+}
+
+.project-box {
+    overflow: hidden;
+    position: relative;
+    background:#F8F8F8;
+    transition: all ease-in .3s;
+    border-radius: 2px;
+    margin-bottom: 70px;
+    -webkit-box-shadow: 10px 11px 4px -9px rgba(0,0,0,0.16);
+    -moz-box-shadow: 10px 11px 4px -9px rgba(0,0,0,0.16);
+    box-shadow: 10px 11px 4px -9px rgba(0,0,0,0.16);
+    
+}
+
+.description {
+    overflow: hidden;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 100%;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+    background-color: #3C6E71;
+    opacity: .5;
+    border-radius: 2px;
+}
+
+.project-box:hover .description {
+    right: 0;
+    width: 100%;
+    opacity: 1;
+}
+
+.description2 {
+    overflow: hidden;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 100%;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+    background-color:#F4743B;
+    border-radius: 2px;
+}
+
+.project-box:hover .description2 {
+    left: 0;
+    width: 100%;
+    opacity: 1;
+}
+
+.text {
+    white-space: nowrap; 
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+.sub-box {
+    padding: 20px;
+}
+
+.img-card {
+    height: 230px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    transition: background-image .3s;
+}
+
+.type {
+    font-family: monospace;
+    font-weight: bold;
+    color: gray;
+}
+
+.title {
+    font-size: 25px;
+}

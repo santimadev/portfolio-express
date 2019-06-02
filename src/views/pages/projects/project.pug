@@ -1,0 +1,16 @@
+extends ../../templates/layout
+
+block main
+    div(style="display: flex")
+        button(class="backButton")
+            a(href=`/projects?clang=${lang}`)
+                i(class="material-icons md-24 teal600") arrow_back_ios
+        p(style="font-family: 'Ubuntu', sans-serif; color: #F4743B; font-size: 35px; margin: 0") #{frontmatter.name}
+    span(style="color: gray; margin-left: 45px") #{frontmatter.slogan}
+    br
+    br
+    img(data-src=img_path + frontmatter.image.replace(/^[.]/, '') class="lazy")
+    span(style="font-family: monospace; text-align: right") #{frontmatter.type}
+    br
+    div!=body
+    

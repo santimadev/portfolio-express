@@ -1,0 +1,22 @@
+doctype
+html(lang="en")
+    head
+        meta(charset="uff-8")
+        title Santiago Marcano - Web Development
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="icon" type="image/x-icon" href="assets/img/favicon.ico")
+        link(href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap|Ubuntu" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    style 
+        include ../css/layout.css
+        include ../css/style.css
+    body
+        .container
+            include nav.pug
+            main(class="view")
+                block main
+        include footer.pug
+        script(src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js")
+        script
+            include ../scripts/lazy.js
+            

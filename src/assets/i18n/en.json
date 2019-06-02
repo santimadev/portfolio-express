@@ -1,0 +1,23 @@
+{
+    "ABOUT": "About",
+    "PROJECTS": "Projects",
+    "BLOG": "Blog",
+    "A_1": "Hi! I'm a Web Developer and digital music enthusiast.",
+    "A_2": "I'm passionate about multidisciplinary learning.",
+    "A_3": "Do you have any project, idea or problem you want to discuss?",
+    "A_4": "Let's talk",
+    "S": "About Me",
+    "S_1": "Web Development",
+    "S_1_1": "I'm a developer with experience in JavaScript ES6, Angular, RxJS, NodeJS, SQL, HTML, CSS and more!",
+    "S_2": "Discipline",
+    "S_2_1": "I'm a believer in agile method guided productivity with a focus on organization.",
+    "S_3": "Team Worker",
+    "S_3_1": "Team work is the escence of software development, that's why learning through joined experience is one of the skills I appreciate most.",
+    "S_4": "Modular Thinking",
+    "S_4_1": "Software development is an exhaustive task based on problem-solving. Breaking appart each problem is fundamental to obtaining quality results.",
+    "BACK": "BACK",
+    "FILTER": "FILTER",
+    "MONTH": "MONTH",
+    "YEAR": "YEAR"
+
+}

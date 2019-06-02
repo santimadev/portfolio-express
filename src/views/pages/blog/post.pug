@@ -1,0 +1,31 @@
+extends ../../templates/layout
+
+block main
+    .view
+        .post
+            a(class="backButton" href=`/blog?clang=${lang}`)
+                i(class="material-icons md-24 teal600") arrow_back_ios
+                span BLOG
+            br
+            img(data-src=img_path + frontmatter.image.replace(/^[.]/, '') class="lazy")
+            h1 #{frontmatter.title}
+            p #{frontmatter.date}
+            div!=body
+            br
+            a(class="backButton" href=`/blog?clang=${lang}`)
+                i(class="material-icons md-24 teal600") arrow_back_ios
+                span BLOG
+            br
+            div(id="disqus_thread")
+            script.
+                var disqus_config = function () {
+                    this.page.url = window.location;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = window.pathname; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://santiagomarcano.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+

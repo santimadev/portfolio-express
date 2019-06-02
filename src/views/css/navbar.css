@@ -1,0 +1,225 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+}
+
+.nav-head {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    padding: 10px;
+    list-style: none;
+}
+
+div {
+    margin: 0;
+}
+
+.title {
+    font-family: 'Ubuntu', sans-serif;
+    color: #3C6E71;
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+}
+
+
+.subtitle {
+    padding: 0;
+    margin: 0;
+    color: #F4743B;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.burger-icon {
+    visibility: hidden;
+    transition: transform .2s;
+    font-size: 25px;
+    color: gray;
+}
+
+.init {
+    display: none;
+}
+
+.hide {
+    overflow: hidden;
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: lightslategray;
+    animation: fadeout .3s;
+    opacity: 0;
+}
+
+.show {
+    overflow: hidden;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(47,79,79,.95);
+    animation: fadein .3s;
+}
+
+.activeRoute {
+    color: #F4743B;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-button {
+    padding-top: 30px;
+    padding-right: 20px;
+    transition: all .5s;
+    font-family: 'Ubuntu', sans-serif;
+    border: none;
+    display: inline-grid;
+    margin: 5px;
+    background: transparent;
+    font-size: 20px;
+    text-decoration: none;
+    outline: none;
+    font-weight: 200;
+    letter-spacing: -2px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    color: gray;
+}
+
+.nav-button:hover {
+    color: #F4743B;
+}
+
+.navigation-desktop {
+    display: flex;
+}
+
+
+@keyframes fadein {
+    0% {opacity: 0; }
+    100% {opacity: 1; }
+}
+
+@keyframes fadeout {
+    0% {opacity: 1; }
+    100% {opacity: 0; }
+}
+
+.mobile {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    margin-top: 30px;
+    padding-left: 20px;
+}
+
+.burger-icon {
+    padding: 0;
+}
+
+.mobileButton, .cross {
+    color: white;
+    text-align: left;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+.cross {
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    outline: none;
+    box-shadow: none;
+}
+
+.avatar {
+    max-width: 52px;
+    max-height: 52px;
+    margin: 0;
+    border-radius: 100%;
+}
+
+.navMobile {
+    display: flex;
+    justify-content: space-between;
+}
+
+.closeContainer {
+    padding-top: 30px;
+    padding-right: 25px;
+}
+
+.logo {
+    outline: none;
+    margin: 0;
+    padding-left: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 701px) {
+    .nav-button {
+        display: none;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .burger-icon {
+        visibility: visible;
+        transition: transform .2s;
+    }
+
+    .navigation-desktop {
+        display: none;
+    }
+
+    .avatar {
+        max-width: 48px;
+        max-height: 48px; 
+    }
+
+    .logo {
+        padding-top: 5px;
+    }
+}
+
+@media (min-width: 700px) {
+    
+    .burger-icon {
+        display: none;
+    }
+
+    .hide {
+        display: none;
+    }
+}
+
+.logo-bar {
+    display: flex;
+    cursor: pointer;
+}
+
