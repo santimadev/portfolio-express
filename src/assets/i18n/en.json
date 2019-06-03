@@ -18,6 +18,7 @@
     "BACK": "BACK",
     "FILTER": "FILTER",
     "MONTH": "MONTH",
-    "YEAR": "YEAR"
+    "YEAR": "YEAR",
+    "NOT_FOUND": "Page not found :("
 
 }

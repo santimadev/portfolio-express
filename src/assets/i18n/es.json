@@ -19,5 +19,6 @@
     "BACK": "ATRÁS",
     "FILTER": "FILTRO",
     "MONTH": "MES",
-    "YEAR": "AÑO"
+    "YEAR": "AÑO",
+    "NOT_FOUND": "Página no encontrada :("
 }
