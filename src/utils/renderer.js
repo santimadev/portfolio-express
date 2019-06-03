@@ -10,10 +10,7 @@ renderer.link = (href, title, text) => {
 renderer.custom_img = (imagePath) => {
     renderer.image = href => {
     const escapedText = href.replace(/^[.]/, '');
-    return `
-    <div style="display: flex; justify-content: center;">
-        <img data-src=${imagePath + escapedText} class="lazy" style="height: auto">
-    </div>`;
+    return `<img data-src=${imagePath + escapedText} class="lazy" style="display: block; margin-left: auto; margin-right: auto;">`;
     }
 }
 

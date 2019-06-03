@@ -85,11 +85,6 @@ div {
     100% { opacity: 1; }
 }
 
-img { 
-    max-width: 100%;
-    max-height: 100%;
-}
-
 ul {
     list-style: none;
     margin: 0;
@@ -170,8 +165,8 @@ a {
 img {
     display: block;
     opacity: 0;
-    width: 220px;
-    height: 280px;
+    max-width: 100%;
+    height: auto;
 }
 img:not(.initial) {
     transition: opacity 1s;
@@ -179,7 +174,7 @@ img:not(.initial) {
 img.initial,
 img.loaded,
 img.error {
-    width: auto;
+    max-width: 100%;
     height: auto;
     opacity: 1;
 }
