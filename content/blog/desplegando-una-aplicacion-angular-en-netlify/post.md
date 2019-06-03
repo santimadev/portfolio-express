@@ -2,7 +2,7 @@
 image: ./main.png
 title: Desplegando una aplicación Angular en Netlify
 author: Santiago Marcano
-date: 05/16/2019
+date: 05/17/2019
 punchline: Simplificar las tareas de despliegue y testing ya sea automatizado o manual es beneficioso para agilizar el flujo de trabajo en el desarrollo. En este artículo veremos como Netlify nos puede ayudar con el despligue con una configuracion prácticamente mínima y unos pocos clicks.
 tags: Netlify, Angular, Casquade
 ---
