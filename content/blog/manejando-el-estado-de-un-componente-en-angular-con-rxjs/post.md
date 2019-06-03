@@ -1,5 +1,5 @@
 ---
-image: ./main.jpg
+image: ./main.png
 title: Manejando el estado de un componente en Angular con RxJS
 author: Santigo Marcano
 date: 05/19/2019

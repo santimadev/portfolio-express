@@ -166,6 +166,7 @@ img {
     display: block;
     opacity: 0;
     max-width: 100%;
+    width: 100%;
     height: auto;
 }
 img:not(.initial) {
@@ -175,9 +176,14 @@ img.initial,
 img.loaded,
 img.error {
     max-width: 100%;
+    width: 100%;
     height: auto;
     opacity: 1;
 }
 img:not([src]) {
     visibility: hidden;
+}
+
+img.avatar {
+    max-width: 50px;
 }

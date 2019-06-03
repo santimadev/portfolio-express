@@ -1,9 +1,9 @@
 ---
-image: ./main.jpg
+image: ./main.png
 title: Desplegando una aplicación Angular en Netlify
 author: Santiago Marcano
-date: 03/22/2016
-punchline: Simplificar las tareas de despliegue y testing ya sea automatizado o manual es beneficioso para agilizar el workflow con el que trabajamos. En este artículo veremos como Netlify nos puede ayudar con el despligue con una configuracion prácticamente mínima y unos pocos clicks.
+date: 05/15/2019
+punchline: Simplificar las tareas de despliegue y testing ya sea automatizado o manual es beneficioso para agilizar el flujo de trabajo en el desarrollo. En este artículo veremos como Netlify nos puede ayudar con el despligue con una configuracion prácticamente mínima y unos pocos clicks.
 tags: Netlify, Angular, Casquade
 ---
 
@@ -39,6 +39,12 @@ Necesitaremos crear un archivo con nombre `_redirects` en la carpeta `src` de nu
 
 /* /index.html 200
 
+```
+
+Y en nuestro `angular.json` agregar la siguiente línea para incluir el redirect como archivo estático
+
+```
+"assets": ["src/_redirects"]
 ```
 
 Con esto informaremos a nuestro servidor de Netlify que todas las rutas redericcionen al index.html de nuestra app y así usar el router de Angular.
