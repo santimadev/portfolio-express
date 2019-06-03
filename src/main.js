@@ -28,6 +28,9 @@ app.use(i18n({
 
 app.use(navigation);
 
+app.get('*', (req, res) => {
+  res.render('pages/404');
+})
 
 app.listen(process.env.PORT, function () {
   console.log(`Example app listening on port ${process.env.PORT}`);
