@@ -212,6 +212,4 @@ Si queremos implementar la funcionalidad para añadir registros es tan sencillo 
 
 De esta forma manejamos sencillamente con el uso de Observables el estado de los datos de un componente. Esta misma idea se podría extrapolar a todo un modulo que comparta la misma "tienda de datos".
 
-El código completo de este artículo lo puedes encontrar en Stackbliz publicado y probarlo tu mismo. 
-
 Gracias por leer el artículo y espero te haya aportado algo!
