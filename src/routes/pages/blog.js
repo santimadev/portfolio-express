@@ -55,14 +55,15 @@ router.get('/blog', async (req, res) => {
         const years = frontmatter_service.getYears(frontmatters);
         const tags = frontmatter_service.getTags(frontmatters);
         const months = frontmatter_service.getMonths(frontmatters);
-        const posts = frontmatter_service.filter(query, frontmatters);
+        let posts = frontmatter_service.filter(query, frontmatters);
 
-        frontmatters.sort((a, b) => {
+        posts.sort((a, b) => {
             const dateA = new Date(a.date).getTime()
             const dateB = new Date(b.date).getTime()
-             return dateB - dateA
+            return dateB - dateA
         })
-        frontmatters = frontmatters.map(post => {
+        
+        posts = posts.map(post => {
             post.date = moment(new Date(post.date)).format('LL')
             return post
         })
