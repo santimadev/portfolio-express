@@ -1,8 +1,7 @@
 extends ../../templates/layout
 
 block main
-    style
-        include ../../css/blog.css
+    link(rel="stylesheet" type="text/css" href="/style/blog.css")
     div(class="blog-template view")
         div(style="display: flex; justify-content: flex-end")
             button(id="filter-btn") FILTER 

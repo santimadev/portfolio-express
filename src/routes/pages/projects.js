@@ -6,7 +6,7 @@ const renderer = require('../../utils/renderer');
 const dir_reader = require('../../utils/dir_reader');
 const path = require('path');
 
-router.get('/project/:name', (req, res) => {
+router.get('/projects/:name', (req, res) => {
 
     const lang = req.i18n_lang;
     const name = req.params.name;

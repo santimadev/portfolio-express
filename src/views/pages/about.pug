@@ -1,9 +1,7 @@
 extends ../templates/layout
 
 block main
-    style
-        include ../css/about.css
-
+    link(rel="stylesheet" type="text/css" href="style/about.css")
     div(class="wrapper view")
         p(class="t1")
             span #{t.A_1}

@@ -15,10 +15,9 @@ app.use(bodyParser.json());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-app.use('/assets', express.static(path.join(__dirname, 'assets'), {
-  maxAge: '1m'
-}));
+app.use('/assets', express.static(path.join(__dirname, 'assets'), { maxAge: '1d' }));
 app.use('/content', express.static(path.join(__dirname, '../content')));
+app.use('/style', express.static(path.join(__dirname, 'views/css')));
 
 app.use(i18n({
   translationsPath: path.join(__dirname, 'assets/i18n'),

@@ -12,7 +12,7 @@ renderer.custom_img = (imagePath) => {
     const escapedText = href.replace(/^[.]/, '');
     return `
     <div style="display: flex; justify-content: center;">
-        <img data-src=${imagePath + escapedText} class="lazy">
+        <img data-src=${imagePath + escapedText} class="lazy" style="height: auto">
     </div>`;
     }
 }
