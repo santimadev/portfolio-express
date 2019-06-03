@@ -19,15 +19,19 @@ Solo hará falta una cuenta en GitHub con algún repositorio con una app de Angu
 
 Primero, ingresamos en la página web de Netlify y nos registramos con GitHub, GitLab o Bickbucket. En mi caso usaré GitHub.
 
--- imagen del registro de Netlify con Github --
+![img](./netlify1.png)
 
-Hacemos click en **New site from Git** y agregamos el repositorio que tengamos en la cuenta y queremos desplegar. En mi caso para este artículo he hecho un fork a un repositorio con una app de Hello World de Angular y será lo que voy a desplegar. 
+Hacemos click en **New site from Git** y agregamos el repositorio que tengamos en la cuenta y queremos desplegar. En mi caso para este artículo he hecho un fork a un repositorio con una app de Hello World de Angular. Este proyecto será el que desplegaré.
 
--- imagen del fork y la integracion del repositorio con netlify --
+![img](./netlify2.png)
 
-Una vez conectamos el repositorio con Netlify, debemos ingresar el comando de build, que en nuestro caso será `ng build --prod` y el directorio de publicación será `./dist`.
+Ahora deberemos configurar el despliegue señalando la rama del repositorio que se desplegará. El comando de build y el directorio de publicación.
 
-Con todo configurado, Netlify dispara el comando del bundle de nuestra aplicación cada vez que detecte un commit en la branch master de nuestro repositorio. La branch puede ser cambiada en cualquier momento. Netlify asignará automáticamente un subdominio (con un nombre bastante ocurrente) para nuestro servidor y dispará nuestro primer deploy.
+Para este caso usaremos `ng build --prod` como comando de build y `./dist` como directorio de publicación. 
+
+![img](./netlify2.png)
+
+Con todo configurado, Netlify dispara el comando del bundle de nuestra aplicación cada vez que detecte un commit en la rama master de nuestro repositorio. La rama puede ser cambiada en cualquier momento. Netlify asignará automáticamente un subdominio (con un nombre bastante ocurrente) para nuestro servidor y dispará nuestro primer deploy.
 
 Si el bundle ha sido ejecutado correctamente y la carpeta con los arvichos estáticos es correcta, podremos ver nuestra app en producción en la ruta asignada por Netlify.
 
