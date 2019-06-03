@@ -1,15 +1,24 @@
+const moment = require('moment');
+
 const frontmatter_service = {
 
     filter(query, frontmatters) {
+        // Translate the date to just the month name
         let expression = new RegExp(query.value)
         switch(query.filter) {
-            // If no filter was found just return 5 posts
+            // If no filter was found just return 4 posts
             case undefined:
             return frontmatters.slice(0, 4);
             case 'tag':
             return frontmatters.filter(post => expression.test(post.tags.toLowerCase()));
             case 'month':
-            return frontmatters.filter(post => expression.test(post.date));
+            // Parsing dates to months names in order to make the filter by month name
+            frontmatters.map(post => {
+                post.month = moment(new Date(post.date)).format('MMMM');
+                post.month = post.month.charAt(0).toUpperCase() + post.month.slice(1);
+                return post;
+            })
+            return frontmatters.filter(post => expression.test(post.month));
             case 'year':
             return frontmatters.filter(post => expression.test(post.date));
         }
@@ -38,7 +47,10 @@ const frontmatter_service = {
 
     getMonths(frontmatters) {
         let months = frontmatters.map(post => {
-            return post.date.match(/[a-zA-Z]*/)[0]
+            let month = moment(new Date(post.date)).format('MMMM');
+            // title case
+            month = month.charAt(0).toUpperCase() + month.slice(1);
+            return month
         })
         // Smash duplicates
         return [...new Set(months)]

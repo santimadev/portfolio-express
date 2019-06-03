@@ -6,6 +6,9 @@ const renderer = require('../../utils/renderer');
 const frontmatter_service = require('../../utils/frontmatter_service');
 const dir_reader = require('../../utils/dir_reader');
 const path = require('path');
+const moment = require('moment');
+moment().format();
+moment.locale('es')
 
 router.get('/blog/:post', (req, res) => {
 
@@ -23,10 +26,12 @@ router.get('/blog/:post', (req, res) => {
         }
         // Get the YAML metadata
         const frontmatter = fm(data);
+        const date = moment(new Date(frontmatter.attributes.date)).format('LL')
         // Compile markdown
         const body = marked(frontmatter.body, { renderer: renderer });
         return res.render('pages/blog/post', { 
             frontmatter: frontmatter.attributes, 
+            date: date,
             body: body, 
             img_path: imagePath, 
             pathname: pathname 
@@ -47,14 +52,22 @@ router.get('/blog', async (req, res) => {
     try {
         let frontmatters = await dir_reader.readMarkdownFolders(source, 'post');
 
+        const years = frontmatter_service.getYears(frontmatters);
+        const tags = frontmatter_service.getTags(frontmatters);
+        const months = frontmatter_service.getMonths(frontmatters);
         const posts = frontmatter_service.filter(query, frontmatters);
-        const filters = {
-            tags: frontmatter_service.getTags(frontmatters),
-            years: frontmatter_service.getYears(frontmatters),
-            months: frontmatter_service.getMonths(frontmatters)
-        }
+
+        frontmatters.sort((a, b) => {
+            const dateA = new Date(a.date).getTime()
+            const dateB = new Date(b.date).getTime()
+             return dateB - dateA
+        })
+        frontmatters = frontmatters.map(post => {
+            post.date = moment(new Date(post.date)).format('LL')
+            return post
+        })
         return res.render('pages/blog/blog', { 
-                filters: filters,
+                filters: { years, tags, months },
                 posts: posts, 
                 img_path: imagePath, 
                 pathname: pathname,
