@@ -4,7 +4,7 @@ title: Manejando el estado de un componente en Angular con RxJS
 author: Santigo Marcano
 date: 05/19/2019
 punchline: Manejar el estado de los datos en el mundo web moderno es una tarea compleja que debe ser realizada con cautela. Actualizar el estado de los datos de un componente en Angular ofrece muchas posibilidades gracias a la potencia de RxJS. Existen formas sencillas de realizar esta tarea sin la necesidad de utilizar BehaviorSubject.
-tags: Angular, RxJS
+tags: Angular, RxJS, JavaScript
 ---
 
 Sin duda, la primera vez que nos topamos con RxJS podemos sentirnos desconcertados con todos sus operadores y su filosofía del "stream de datos" pero una vez te empapas bien, puedes darte cuenta de lo trivial que se vuelve manejar procesos asíncronos con esta increíble libreria.
