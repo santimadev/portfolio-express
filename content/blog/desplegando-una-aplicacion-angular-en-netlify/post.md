@@ -2,9 +2,9 @@
 image: ./main.png
 title: Desplegando una aplicación Angular en Netlify
 author: Santiago Marcano
-date: 05/15/2019
+date: 05/18/2019
 punchline: Simplificar las tareas de despliegue y testing ya sea automatizado o manual es beneficioso para agilizar el flujo de trabajo en el desarrollo. En este artículo veremos como Netlify nos puede ayudar con el despligue con una configuracion prácticamente mínima y unos pocos clicks.
-tags: Netlify, Angular, Casquade
+tags: Netlify, Angular
 ---
 
 [Netlify](https://www.netlify.com) es una increíble plataforma para desplegar sitios web estáticos con unos pocos clicks. Una gran ventaja de usar Netlify es la posibilidad de hacer **CI/CD** (continous integration / continous deployment) con una configuración completamente trivial, por no decir nula. También tendremos la posibilidad de tener los certificados SSL en nuestro servidor sin esfuerzo alguno.
