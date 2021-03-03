@@ -19,6 +19,6 @@
     "jstransformer-markdown-it": "^2.1.0",
     "marked": "^0.6.2",
     "moment": "^2.24.0",
-    "pug": "^2.0.3"
+    "pug": "^3.0.1"
   }
 }
